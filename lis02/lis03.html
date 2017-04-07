@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title></title>
+</head>
+<body>
+<form action="http://10.7.1.98/taozhuo/form_data.php" method="get">
+	<table border="1" cellspacing="0" align="center">
+		<tr>
+			<td width="79" >用户名：</td>
+			<td width="309"><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td width="79" >密码：</td>
+			<td width="309"><input type="password" name="password"></td>
+		</tr>
+		<tr>
+			<td width="79" >确认密码：</td>
+			<td width="309"><input type="password" name="password"></td>
+		</tr>
+		<tr>
+			<td width="79" >性别：</td>
+			<td width="309"><input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female">女</td>
+		</tr>
+		<tr>
+			<td width="79" >生日：</td>
+			<td width="309"><select name="time">
+				<option>公立</option>
+			</select>
+			<select name="time">
+				<option>年</option>
+			</select>
+			<select name="time">
+				<option>月</option>
+			</select>
+			<select name="time">
+				<option>日</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td width="79" >所在地：</td>
+			<td width="309"><select name="location">
+				<option>中国</option>
+			</select>
+			<select name="location">
+				<option>河北</option>
+			</select>
+			<select name="location">
+				<option>石家庄</option>
+			</select>
+		</tr>
+		<tr>
+			<td width="79" >验证码：</td>
+			<td width="309"><input type="text" name="name"></td>
+		</tr>
+		<tr>
+				<td width="79" >证件类型：</td>
+				<td width="309">
+					<select name="certificate">
+						<option>身份证</option>
+					</select>
+				</td>
+		</tr>
+		<tr>
+			<td width="79" >证件号：</td>
+			<td width="309"><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td width="79" >爱好：</td>
+			<td width="309">
+				<input type="checkbox" name="like">音乐
+				<input type="checkbox" name="like">读书
+				<input type="checkbox" name="like">跳舞
+				<input type="checkbox" name="like">下棋
+				<input type="checkbox" name="like">其他
+			</td>
+		</tr>
+		<tr>
+			<td width="79" >说明：</td>
+			<td width="309">
+				<textarea rows="3" cols="15"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td width="79" >上传头像：</td>
+			<td><input type="file" name="ding"></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">
+				<input type="submit" name="submit">
+				<input type="reset" name="reset">
+				<input type="button" name="button" value="按钮">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
