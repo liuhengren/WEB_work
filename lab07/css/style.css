@@ -1,0 +1,29 @@
+body {
+	color: grey;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 2em;
+}
+a {
+	color: #727272;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.index{
+	color: #b9f605;
+	font-size: 14px;
+	font-weight: bold;
+}
+.index a{
+	color: white;
+}
+.index a:hover{
+	color: #b9f605;
+	text-decoration: none;
+	font-size: 1em;
+}
+#sp {
+	color: #fdb306;
+}
