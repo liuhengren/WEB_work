@@ -24,5 +24,10 @@ ul li{
 	padding-top: 7px;
 	background-repeat: no-repeat;
 }
-
- 
+a{
+	text-decoration: none;
+	color: grey;
+}
+#green a{
+	color: #ffffff
+}
