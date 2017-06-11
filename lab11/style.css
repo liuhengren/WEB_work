@@ -1,0 +1,23 @@
+div.imgage{
+	float: left;
+	border: 1px solid #bebebe;
+	opacity:0.5;
+}
+div.imgage img{
+	display: inline;
+	margin:3px;
+	border: 1px solid #bebebe;
+	width: 200px;
+	height: 160px;
+
+}
+div.desc{
+	width: 200px;
+	text-align: center;
+}
+div.imgage a :hover img{
+	border: 1px solid #333333;
+}
+div.imgage:hover{
+	opacity:1;
+}
