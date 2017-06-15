@@ -1,69 +1,70 @@
 #wrap{
-	width:1000px;
-	height:835px;
-	border:#000000 5px solid;
-	background-color:#FF99FF;
-	margin: auto;
+	width: 100px;
+	height: 835px;
+	border: :#000000 5px solid;
+	background-color: #FF99FF;
+	margin:auto;
 }
 #header{
-	width:960px;
-	height:245px;
-	border:#FF0000 solid 3px;
-	background-color:#0099FF;
-	margin:auto;
-	padding-left:15px;
+	width: 960px;
+	height: 245px;
+	border: #FF0000 3px solid;
+	background-color: #0099FF;
+	margin: auto;
+	padding-left: 15px;
 }
 #headerlogo{
-	width:170px;
-	height:80px;
-	border:#FF0000 solid 2px;
+	width: 170px;
+	height: 80px;
+	border:#FF0000 2px solid;
+	margin: auto;
 	background-color: #CCFF99;
-	margin:auto;
 	float: left;
 }
 #headernav{
-	width:770px;
-	height:80px;
-	border:#FF0000 solid 2px;
+	width: 770px;
+	height: 80px;
+	border:#FF0000 2px solid;
+	margin: auto;
 	background-color: #FFFF99;
-	margin:auto;
-	float:left;
+	float: left;
 }
 #headerbanner{
-	width:944px;
-	height:160px;
-	border:#FF0000 solid 2px;
+	width: 944px;
+	height: 160px;
+	border:#FF0000 2px solid;
 	background-color: #66FF33;
-	clear:both;
+	clear: both;
 }
 #content{
-	width:960px;
-	height:445px;
-	border:#FF0000 solid 3px;
+	width: 960px;
+	height: 420px;
+	border:#FF0000 3px solid;
 	background-color: #333366;
-	margin:auto;
-	padding-left:15px;
-	padding-top:9px;
+	margin: auto;
+	padding-left: 15px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 }
 #contentleft{
-	width:600px;
-	height:420px;
-	border:#FF0000 solid 2px;
+	width: 600px;
+	height: 420px;
+	border:#FF0000 2px solid;
 	background-color: #33CC00;
-	float:left;
+	float: left;
 }
 #contentright{
-	width:340px;
-	height:420px;
-	border:#FF0000 solid 2px;
+	width: 340px;
+	height: 420px;
+	border:#FF0000 2px solid;
 	background-color: #FFFF00;
-	float:left;
+	float: left;
 }
 #footer{
-	width:960px;
-	height:100px;
-	border:#FF0000 solid 3px;
+	width: 960px;
+	height: 100px;
+	border:#FF0000 3px solid;
 	background-color: #FFCC33;
-	margin:auto;
-	padding-left:15px;
-}	
+	margin: auto;
+	padding-left: 15px;
+}
