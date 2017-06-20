@@ -1,0 +1,69 @@
+#content{
+	width: 900px;
+	height: auto;
+	margin-left: 150px;
+	border: 1px grey solid;
+	border-radius: 25px;
+	margin-top: 10px;
+}
+.beader{
+	margin-left: 155px;
+}
+p{ 
+	text-indent:2em;
+}
+#wen{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#return{
+	margin-top: 8px;
+	margin-right: 8px;
+	float: right;
+}
+#ex ul li{
+	display: inline;
+}
+#ex2 ul li{
+	display: inline;
+}
+#pinglun{
+	width: 900px;
+	height: 500px;
+	border: 1px grey solid;
+
+	border-radius: 25px;
+	margin-top: 10px;
+	margin-left: 150px;
+	background-image: url(../images/bc2.png);
+	 position:relative
+}
+#pl{
+	margin-right: 30px;
+	margin-top: 30px;
+	float: right;
+}
+#plarea{
+	width: 650px;
+	height: 300px;
+	position:absolute; 
+	left:240px; top: 140px;
+}
+#plk{
+	background-color: transparent;
+	font-size: 20px;	
+	box-shadow: 2px 2px 1px #000;
+}
+#submit1{
+	background-color:transparent;
+	margin-top: 10px;
+	width: 60px;
+	height: 30px;
+	border-radius: 25px;
+}
+#liuyan{
+	width: 650px;
+	height: auto;
+	border: 1px grey solid;
+	border-radius: 25px;
+}

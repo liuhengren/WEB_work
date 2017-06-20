@@ -1,0 +1,90 @@
+body{
+	margin: 0 auto ;
+	padding: 0px;
+	text-decoration:none;
+	font-weight: 400;
+    font-size: 16px;
+    color: #626262;
+    font-family: "宋体";
+    background-image: url(../images/bc1.jpg);
+/*    background-size: cover;*/
+}
+
+img{
+	border: none;
+}
+li{
+	list-style-type:none;
+}
+a:link{
+	text-decoration:none;
+	color:#626262;
+}
+a:hover{
+	color:#000;
+}
+#all{
+	width: 1300px;
+	margin: 0 auto ;
+	height: auto;
+}
+
+#banner{
+	float: left;
+	background-image: url(../images/banner3.jpg);
+	width: 1000px;
+	height: 288px;
+	margin-left: 100px;
+}
+#more{
+	float: right;
+	font-size: 15px;
+}
+#top{
+	background-color: #fbf2eb;
+	height: 40px;
+	width: 100%;
+	font-size: 10px;
+}
+#nav{
+	float: left;
+	height: 40px;
+	font-size: 13px;		
+	vertical-align:middle;
+}
+.nav-pis{
+	width:16px;
+}
+#nav ul li{
+	display: inline;
+	margin-left: 10px;
+
+}
+#ser{
+	float: right;
+	padding-top: 9px;
+	padding-right: 60px;
+}
+#fotter{
+	clear: both;
+	background-color: black;
+	height: 50px;	
+	color:#fff;
+	padding-top: 20px;
+}
+.beader{
+	clear: both;
+	margin-left: 100px;
+	padding-top: 10px;
+}
+.fenge{
+	background-image: url(../images/fenge.png);
+	height: 140px;
+	clear: both;
+	width: 1200px;
+	margin-left: 0px;
+}.pic3{
+	padding-top: 30px;
+	padding-left: 140px;
+}
+

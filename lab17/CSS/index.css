@@ -1,0 +1,91 @@
+
+#pba{
+	float: right;
+}
+#submit{
+	margin-top: 110px;
+	margin-left: 30px;
+	padding-right: 30px;
+	color: white;
+}
+.int{
+	background:none;
+}
+#pic{
+	clear: both;
+}
+#coent{
+	float: left;
+	height: 550px;
+	width: 1200px;
+}
+
+
+#tuijian{
+	height: 420px;
+}
+#text{
+	width: 600px;
+	height: 400px;
+	float: left;
+	margin-left: 80px;
+	border-bottom: grey 1px solid;
+}
+#pic5{
+	float: left;
+}
+#neirong{
+	font-size: 20px;
+	line-height: 30px;
+}
+#list
+{
+	height: 400px;
+	width: 470px;
+	float: left;
+	margin-left: 30px;
+	font-size: 15px;
+	border-bottom: grey 1px solid;
+}
+#list ul li{
+	height: auto;
+	text-align: auto;
+	margin-top: 15px;
+
+}
+.list_c{
+	float: left;
+}
+#fenxiang{
+	padding-top: 30px;
+	padding-left: 140px;
+}
+#pics{
+	clear: both;
+	margin-left: 60px;
+	padding-top: -10px;
+	color: black;
+}
+div.imgage{	
+	float: left;
+	border: 1px solid #bebebe;
+	opacity:0.7;
+	margin-bottom: 80px;
+}
+div.imgage img{
+	display: inline;
+	margin:3px;
+	border: 1px solid #bebebe;
+	width: 210px;
+	height: 180px;
+}
+div.desc{
+	width: 200px;
+	text-align: center;
+}
+div.imgage a :hover img{
+	border: 1px solid #333333;
+}
+div.imgage:hover{
+	opacity:1;
+}
