@@ -67,3 +67,36 @@ p{
 	border: 1px grey solid;
 	border-radius: 25px;
 }
+#plk2{
+	width: 900px;
+	height: auto;
+	border: 1px grey solid;
+	margin-left: 150px;
+	border-radius: 25px;
+}
+#pic{
+	width: 100px;
+	height: 100px;
+	float: left;	
+	margin-right: 30px;
+}
+#text{
+	width: 650px;
+	height: 100px;
+	float: left;
+	text-align: justify;
+
+}
+.tx{
+	width: 100px;
+	height: 100px;
+}
+.ppl{
+	margin-top: 10px;
+	width: 850px;
+	height: 102px;
+	border-bottom: 1px grey solid;
+}
+.floot{
+	float: right;
+}
