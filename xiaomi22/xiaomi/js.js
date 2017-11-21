@@ -1,21 +1,20 @@
 window.onload = function(){
-			var cts = document.getElementsByClassName("cts1" )
-			var tcts=document.getElementsByClassName("cts2" )
 			var divs=document.getElementsByClassName("main0");
 			var divst=document.getElementsByClassName("main");
 			var lits=document.getElementsByClassName("idx");
+			var asd=document.getElementsByClassName("bts");
 			var t=false;
 			//实现橙色框功能
-			for (var i=0; i<cts.length; i++)
+			for (var i=0; i<asd.length; i++)
 			{
-				cts[i].onmouseover = function(){
-					this.className = "t_cts1";
-					this.nextSibling.className="cts3"
+				asd[i].onmouseover = function(){
+					this.children[2].className = "t_cts1";
+					this.children[2].nextSibling.className="cts3"
 				}
 
-				tcts[i].onmouseout = function(){
-					this.className = "cts2";
-					this.previousSibling.className="cts1"
+				asd[i].onmouseout = function(){
+					this.children[3].className = "cts2";
+					this.children[3].previousSibling.className="cts1"
 				}
 			}
 			//实现通过划过不同类型换页功能
@@ -36,7 +35,6 @@ window.onload = function(){
 				divst[0].className="main0"
 				divs[a].className="main"
 			}
-			
 		}
 }
 
