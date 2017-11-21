@@ -145,7 +145,7 @@ h3{
 	color: grey;
 }
 /*//无法实现上移效果，使用模板*/
-/*.main li{
+.main li{
 	transition:All 0.4s ease-in-out;
 	-webkit-transition:All 0.4s ease-in-out;
 	-moz-transition:All 0.4s ease-in-out;
@@ -161,4 +161,4 @@ h3{
 	-webkit-box-shadow:0px 5px 15px #e5e5e5;
     -moz-box-shadow:0px 5px 15px #e5e5e5;
     box-shadow:0px 5px 15px #e5e5e5;
-}*/
+}
