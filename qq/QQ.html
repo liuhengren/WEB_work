@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QQ聊天</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,ol,li{
+			list-style: none;
+		}
+		.clearFix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#wrap{
+			width: 678px;
+			height: 615px;
+			margin: 10px auto;
+			border: 1px solid #000; 
+			background-color: #f8f7f4;
+		}
+		/*顶部样式*/
+		.header{
+			height: 50px;
+		}
+		.header>span{
+			float: left;
+			margin: 20px 0 0 12px;
+			line-height: 30px;
+		}
+		.headImg{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: url(img/head.png) center center;
+			background-size: cover;
+		}
+		/*导航样式*/
+		.nav{
+			height: 40px;
+			line-height: 37px;
+			border-bottom: 1px solid #e2e1df;
+		}
+		.nav>li{
+			float: left;
+			margin: 0 8px;
+			padding: 0 4px;
+			cursor: default;
+			color: #767676;
+		}
+		.nav>li:last-child:after{
+			content: "▼";
+			font-size: 10px;
+			margin-left: 5px;
+		}
+		.nav>li:hover{
+			color: #000;
+		}
+		.nav>.active{
+			color: #000;
+			border-bottom: 3px solid #009bdb;
+		}
+		/*底部主体样式*/
+		.footer>div{
+			float: left;
+		}
+		.notice{
+			width: 200px;
+			height: 525px;
+			border-left: 1px solid #e2e1df;
+
+		}
+		/*消息框样式*/
+		.talk{
+			width: 476px;
+		}
+		.talkMsg{
+			width: 476px;
+			height: 400px;
+			overflow-y: auto;
+			border-bottom: 1px solid #e2e1df;
+		}
+		.time{
+			text-align: center;
+			color: #808080;
+			font-size: 10px;
+			line-height: 30px;
+		}
+		.talkInp{
+			height: 124px;
+		}
+		.myHead{
+			float: right;
+			margin-right: 12px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: url(img/myHead.jpg) center center;
+			background-size: cover;
+		}
+		.content{
+			float: right;
+		}
+		.conText{
+			padding: 10px;
+			max-width: 380px;
+			line-height: 22px;
+			border-radius: 8px;
+			margin-right: 10px;
+			font-size: 12px;
+			float: left;
+			background-color: #dfdddb;
+		}
+		.area{
+			width: 456px;
+			padding: 5px 10px;
+			height: 50px;
+			resize: none;
+			outline: none;
+			border: none;
+			background-color: #f8f7f4;
+		}
+		.btn{
+			float: right;
+		}
+		.btn li{
+			font-weight: bold;
+			cursor: default;
+			display: block;
+			float: left;
+			height: 24px;
+			line-height: 24px;
+			padding: 0 16px;
+			margin-right: 12px;
+			border-radius: 4px;
+			font-size: 12px;
+			background-color: #dbd1be;
+		}
+		.send{
+			position: relative;
+		}
+		.send:after{
+			content: "▼";
+			color: #6e695f;
+			margin-left: 15px;
+		}
+		.warning{
+			width: 150px;
+			height: 50px;
+			border: 1px solid lightblue;
+			border-radius: 8px;
+			padding: 0 5px;
+			position: absolute;
+			left: -70px;
+			top: -55px;
+			display: none;
+		}
+		#mousemune{
+			width: 140px;
+			height: 155px;
+			border: 1px solid grey;
+			background-color: #eceeed;
+			display: none;
+			position : absolute;
+		}
+		#mousemune ul li{
+			margin-left:30px;
+			padding-left: 8px;
+			display: block;
+			font-size: 14px;
+			line-height: 25px;
+			background-color: #fefffe;
+			/*background-color: #009bdb;*/
+		}
+		#num_r{
+			display: none;
+			border: 1px solid grey;
+			background-color: #fefffe;
+			position: absolute;
+			left: 113px;
+			top: 0px;
+			width: 90px;
+		}
+		#clik{
+			position: relative;
+		}
+		#smort{
+			width: 470px;
+			height: 30px;
+		}
+		#smort img{
+			width: 18px;
+			height: 18px;
+			
+		}
+		#smort>div{
+			text-align: center;
+			padding-top: 6px;
+			float: left;
+			width: 30px;
+			height: 24px;
+		}
+		#smort>div:hover{
+			background-color: grey;
+		}
+		#bqs{
+			width: 460px;
+			height: 300px;
+			border: 1px solid black;
+			position: absolute;
+			background-color: white;
+			top: -300px;
+			overflow:auto;
+			display: none;
+		}
+		#bqs img {
+			width: 24px;
+			height: 24px;
+		}
+		.pics{
+			margin-left: 6px;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			float: left;
+		}
+		.pics:hover{
+			background-color: grey;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="header">
+			<span class="headImg"></span>
+			<span>16级七八班事务通知群</span>
+		</div>
+		<ul class="nav">
+			<li class="active">聊天</li>
+			<li>公告</li>
+			<li>相册</li>
+			<li>文件</li>
+			<li>活动</li>
+			<li>设置</li>
+		</ul>
+		<div class="footer">
+			<div class="talk">
+				<div class="talkMsg">
+					<ul id="msgBox">
+						<li class="clearFix">
+							<p class="time">2017/10/12 16:59:32</p>
+							<p class="content">
+								<span class="conText">好好学习</span>
+								<span class="myHead"></span>
+							</p>
+						</li>
+						<li class="clearFix">
+							<p class="time">2017/10/12 16:59:32</p>
+							<p class="content">
+								<span class="conText">天天向上</span>
+								<span class="myHead"></span>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="talkInp">
+					<div id="smort">
+						<div><img src="字体.png"></div>
+						<div id="biaoqing" style="position: relative;">
+							<img src="表情.png">
+							<div id="bqs">
+								<div style="width: 430px;height: 30px; text-align: left; margin-left: 30px ;padding-top:5px;">
+									经典表情
+								</div>
+								<div id="pic">
+									
+								</div>
+							</div>
+						</div>
+						<div><img src="gif.png"></div>
+						<div><img src="匿名.png"></div>
+						<div><img src="热门图片.png"></div>
+						<div><img src="上传文件.png"></div>
+						<div><img src="礼物.png"></div>
+						<div><img src="截图.png"></div>
+						<div><img src="红包.png"></div>
+						<div><img src="消息.png"></div>
+					</div>
+					<textarea class="area"></textarea>
+					<ul class="btn">
+						<li>关闭(c)</li>
+						<li class="send">
+							发送(s)
+							<p class="warning">发送内容不能为空，请重新输入</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="notice">
+				
+			</div>
+		</div>
+	</div>
+	<div id="mousemune">
+		<ul >
+			<li>复制（C）</li>
+			<li>全部先择（A）<hr></li>
+			<li id="clik">显示比例
+				<ul id="num_r">
+					<li>400%</li>
+					<li>200%</li>
+					<li>150%</li>
+					<li>125%</li>
+					<li>100%</li>
+					<li>75%</li>
+					<li>50%</li>
+				</ul>
+			</li>
+			<li>多彩气泡</li>
+			<li>设置多彩气泡<hr></li>
+			<li>清屏</li>
+		</ul>
+	</div>
+</body>
+<script>
+	var send = document.getElementsByClassName('send')[0];
+	var area = document.getElementsByClassName('area')[0];
+	var warning = document.getElementsByClassName('warning')[0];
+	var msgBox = document.getElementById('msgBox');
+	var timer;
+	// 回车发送消息
+	area.onkeydown = function(e){
+		if(e.keyCode == 13&&e.shiftKey==false){
+			send.onclick();
+			e.preventDefault();
+		}
+	}
+
+	// 点击发送按钮发送消息
+	send.onclick = function(){
+		if (area.value == '') {
+			warning.style.display = 'block';
+			clearTimeout(timer);
+			timer = setTimeout(function(){
+				warning.style.display = 'none';
+			},1000)
+		}else{
+			var li = document.createElement('li');
+			li.className = 'clearFix';
+			li.innerHTML = '<p class="time">'+new Date().toLocaleString()+'</p><p class="content"><span class="conText">'+area.value+'</span><span class="myHead"></span></p>';
+			msgBox.appendChild(li);
+			li.scrollIntoView();
+			area.value ='';
+			area.focus();
+		}
+	}
+	//右键菜单	
+	var t=document.getElementById('mousemune');
+	var mune=t.children[0].children;
+	var mune_r=document.getElementById('clik');
+	var acs=1;
+	mune_r.onclick=function()
+	{
+		mune_r.children[0].style.display='block';
+		acs=0;
+	}
+	var mune_rs=mune_r.children[0].children;
+	console.log()
+	for(var i=0;i<mune_rs.length;i++)
+	{
+		mune_rs[i].onmouseover=function(){
+			this.style.backgroundColor='#009bdb';
+		}
+		mune_rs[i].onmouseout=function(){
+			this.style.backgroundColor='#fefffe';
+		}
+	}
+	for(var i=0;i<mune.length;i++)
+	{
+		mune[i].onmouseover=function(){
+			this.style.backgroundColor='#009bdb';
+		}
+		mune[i].onmouseout=function(){
+			this.style.backgroundColor='#fefffe';
+		}
+	}
+	document.oncontextmenu=function(){
+		pqs.style.display='none';
+		mune_r.children[0].style.display='none';
+		count=1;
+		return false;
+	}
+	var wrap=document.getElementById('wrap');
+	wrap.oncontextmenu=function(){
+		t.style.display='block';
+		var x=window.event.clientX;
+		var y=window.event.clientY;
+		t.style.left=x+10+"px";
+		t.style.top=y+10+"px";
+	}
+	document.onclick=function(){
+		if(acs!=0)
+		{
+			t.style.display='none'
+			mune_r.children[0].style.display='none';
+		}
+		else
+			acs=1;
+	}
+	//表情
+	var img =document.getElementById('pic');
+	for(var i=1;i<133;i++)
+	{
+		var divs=document.createElement("div");
+		var pic=document.createElement("img");
+		divs.className='pics';
+		pic.src='img\\QQ\\'+i+'.gif'
+		divs.appendChild(pic);
+		img.appendChild( divs);
+	}
+	var pq=document.getElementById('biaoqing');
+	var pqs=document.getElementById('bqs');
+	var count=1;
+	pq.onclick=function(){
+		if(count==1)
+		{
+			pqs.style.display='block';
+			count=0;
+		}
+		else
+		{
+			pqs.style.display='none';
+			count=1;
+		}
+		
+	}
+</script>
+</html>
