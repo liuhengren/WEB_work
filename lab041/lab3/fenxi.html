@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0 auto;
+		}
+		ul,ol,li{
+			list-style: none;
+		}
+		#wrap{
+			margin-top: 100px;
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000; 
+			font-weight: bold;
+		}
+		#wrap>p{
+			background-color: #f3f7ff;
+			height: 30px;
+			padding-left: 10px;
+			padding-top: 10px;
+		}
+		#sta{
+			padding-left: 5px;
+		}
+		.star{
+			float: left;
+			margin-right: 10px;
+			margin-top: 5px;
+		}
+		#ip{
+			clear: both;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div id="wrap">
+		<p>宝贝与描述相符（打分匿名）</p>
+		<div id="sta">
+			<div class="star"><img src="images/star0.png" name="1"></div>
+			<div class="star"><img src="images/star0.png" name="2"></div>
+			<div class="star"><img src="images/star0.png" name="3"></div>
+			<div class="star"><img src="images/star0.png" name="4"></div>
+			<div class="star"><img src="images/star0.png" name="5"></div>
+		</div>
+		<div id="ip">
+		<form>
+			<textarea name="a" id="pla" style="width:490px ;height:200px;resize:none;"></textarea>
+		</form>
+		</div>
+		<select name="select" style="float: right; margin-right: 10px;">
+   			<option>公开评论</option>
+			<option>匿名评论</option>
+    </select>
+	</div>
+</body>
+<script type="text/javascript">
+	var stars=document.getElementsByClassName('star');
+	var s=document.getElementById('pla');
+	var pls=["","很不满意","不满意","一般","满意","非常满意"];
+	var con=false;
+	for(var i=0;i<stars.length;i++)
+	{
+		stars[i].children[0].onmouseover=function(){starPic(this.name)};
+		stars[i].children[0].onmouseout=function(){hide()};
+		stars[i].children[0].onclick=function(){qd(this.name);};
+	}
+	function starPic(which)
+	{
+		if(which<=2)
+		{
+			for(var i=0;i<which;i++)
+			{
+				stars[i].children[0].src="images/star1.png";
+			}
+		}
+		else{
+			for(var i=0;i<which;i++)
+			{
+				stars[i].children[0].src="images/star2.png";
+			}
+		}
+	}
+	function hide()
+	{
+		if(!con)
+		{
+			for(var i=0;i<stars.length;i++)
+			{
+				stars[i].children[0].src="images/star0.png"
+			}
+		}
+	}
+	function qd(which)
+	{
+		s.value=pls[which];
+		if(which<=2)
+		{
+			for(var i=0;i<which;i++)
+			{
+				stars[i].children[0].src="images/star1.png";
+			}
+		}
+		else{
+			for(var i=0;i<which;i++)
+			{
+				stars[i].children[0].src="images/star2.png";
+			}
+		}
+		for(var i=0;i<5-which;i++)
+		{
+			stars[stars.length-i-1].children[0].src="images/star0.png";
+		}
+		con=true;
+	}
+</script>
+</html>
