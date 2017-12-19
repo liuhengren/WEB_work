@@ -13,7 +13,7 @@ window.onload=function()
 	  		pic. scrollLeft++;
 		}
 	}
-	i=setInterval(changeToLeft,10);
+	//i=setInterval(changeToLeft,10);
 	pic. onmouseover=function(){
 		clearInterval(i);
 	}
