@@ -35,30 +35,8 @@
 			clear: both;
 		}
 	</style>
-	<title></title>
-</head>
-<body>
-	<div id="wrap">
-		<p>宝贝与描述相符（打分匿名）</p>
-		<div id="sta">
-			<div class="star"><img src="images/star0.png" name="1"></div>
-			<div class="star"><img src="images/star0.png" name="2"></div>
-			<div class="star"><img src="images/star0.png" name="3"></div>
-			<div class="star"><img src="images/star0.png" name="4"></div>
-			<div class="star"><img src="images/star0.png" name="5"></div>
-		</div>
-		<div id="ip">
-		<form>
-			<textarea name="a" id="pla" style="width:490px ;height:200px;resize:none;"></textarea>
-		</form>
-		</div>
-		<select name="select" style="float: right; margin-right: 10px;">
-   			<option>公开评论</option>
-			<option>匿名评论</option>
-    </select>
-	</div>
-</body>
-<script type="text/javascript">
+	<script type="text/javascript">
+	window.onload=function(){
 	var stars=document.getElementsByClassName('star');
 	var s=document.getElementById('pla');
 	var pls=["","很不满意","不满意","一般","满意","非常满意"];
@@ -117,5 +95,30 @@
 		}
 		con=true;
 	}
+	}
 </script>
+	<title></title>
+</head>
+<body>
+	<div id="wrap">
+		<p>宝贝与描述相符（打分匿名）</p>
+		<div id="sta">
+			<div class="star"><img src="images/star0.png" name="1"></div>
+			<div class="star"><img src="images/star0.png" name="2"></div>
+			<div class="star"><img src="images/star0.png" name="3"></div>
+			<div class="star"><img src="images/star0.png" name="4"></div>
+			<div class="star"><img src="images/star0.png" name="5"></div>
+		</div>
+		<div id="ip">
+		<form>
+			<textarea name="a" id="pla" style="width:490px ;height:200px;resize:none;"></textarea>
+		</form>
+		</div>
+		<select name="select" style="float: right; margin-right: 10px;">
+   			<option>公开评论</option>
+			<option>匿名评论</option>
+    </select>
+	</div>
+</body>
+
 </html>
